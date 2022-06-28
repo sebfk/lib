@@ -9,7 +9,7 @@ import Web3 from 'web3'
 
 import { SwapperType } from './api'
 import { SwapperManager } from './manager/SwapperManager'
-import { ZrxSwapper } from './swappers/zrx/ZrxSwapper'
+import { EthereumZrxSwapper } from './swappers/zrx/EthereumZrxSwapper'
 
 dotenv.config()
 
@@ -94,7 +94,7 @@ const main = async (): Promise<void> => {
   const zrxSwapperDeps = { wallet, adapter: ethChainAdapter, web3 }
 
   const manager = new SwapperManager()
-  const zrxSwapper = new ZrxSwapper(zrxSwapperDeps)
+  const zrxSwapper = new EthereumZrxSwapper(zrxSwapperDeps)
   manager.addSwapper(SwapperType.Zrx, zrxSwapper)
   const swapper = await manager.getBestSwapper({
     sellAssetId: 'eip155:1/slip44:60',

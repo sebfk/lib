@@ -6,13 +6,12 @@ import { BuildTradeInput, SwapError, SwapErrorTypes, ZrxTrade } from '../../..'
 import { erc20AllowanceAbi } from '../../utils/abi/erc20Allowance-abi'
 import { bnOrZero } from '../../utils/bignumber'
 import { APPROVAL_GAS_LIMIT, DEFAULT_SLIPPAGE } from '../../utils/constants'
-import { getAllowanceRequired } from '../../utils/helpers/helpers'
-import { normalizeAmount } from '../../utils/helpers/helpers'
+import { getAllowanceRequired, normalizeAmount } from '../../utils/helpers/helpers'
+import { ZrxSwapperDeps } from '../EthereumZrxSwapper'
 import { ZrxQuoteResponse } from '../types'
 import { applyAxiosRetry } from '../utils/applyAxiosRetry'
 import { AFFILIATE_ADDRESS, DEFAULT_SOURCE } from '../utils/constants'
 import { zrxService } from '../utils/zrxService'
-import { ZrxSwapperDeps } from '../ZrxSwapper'
 
 export async function zrxBuildTrade(
   { adapter, web3 }: ZrxSwapperDeps,

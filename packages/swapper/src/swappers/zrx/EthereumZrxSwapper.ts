@@ -31,7 +31,7 @@ export type ZrxSwapperDeps = {
   web3: Web3
 }
 
-export class ZrxSwapper implements Swapper<'eip155:1'> {
+export class EthereumZrxSwapper implements Swapper<'eip155:1'> {
   public static swapperName = 'ZrxSwapper'
   deps: ZrxSwapperDeps
 

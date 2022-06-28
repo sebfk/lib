@@ -4,7 +4,7 @@ import { ApprovalNeededInput, ApprovalNeededOutput, SwapError, SwapErrorTypes } 
 import { erc20AllowanceAbi } from '../../utils/abi/erc20Allowance-abi'
 import { bnOrZero } from '../../utils/bignumber'
 import { getERC20Allowance } from '../../utils/helpers/helpers'
-import { ZrxSwapperDeps } from '../ZrxSwapper'
+import { ZrxSwapperDeps } from '../EthereumZrxSwapper'
 
 export async function ZrxApprovalNeeded(
   { adapter, web3 }: ZrxSwapperDeps,
